@@ -1,0 +1,230 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("textures/noise3.png");
+    background-size: 1200px 800px;
+    opacity: 0.3;
+    z-index: -2;
+    pointer-events: none;
+}
+
+body {
+    position: relative;
+    background-size: 100% 8000px;
+    background-position: 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px,
+        0px 0px, 0px 0px, 0px 0px;
+    background-image: radial-gradient(
+            23% 10% at 80% 8%,
+            #ff00561f 0%,
+            #073aff00 100%
+        ),
+        radial-gradient(19% 4% at 9% 1%, #ffffff85 0%, #073aff00 100%),
+        radial-gradient(19% 4% at 100% 1%, #ffffff85 0%, #073aff00 100%),
+        radial-gradient(21% 16% at 12% 15%, #f5907578 0%, #073aff00 100%),
+        radial-gradient(18% 20% at 81% 23%, #f5907578 0%, #073aff00 100%),
+        radial-gradient(20% 20% at 5% 60%, #da473732 0%, #073aff00 100%),
+        radial-gradient(30% 20% at 90% 70%, #c1612e64 0%, #073aff00 100%),
+        radial-gradient(19% 15% at 100% 45%, #ffffff5d 0%, #073aff00 100%),
+        linear-gradient(186deg, #ffe8cb 0%, #d0947d 50%, #ffe6d4 100%);
+}
+
+#navbar {
+    position: relative;
+    background-color: rgba(253, 212, 165, 0.35);
+    padding: 0.1em;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar-nav .nav-item {
+    font-family: "Poiret One";
+    font-weight: 800;
+    font-size: 1em;
+    text-transform: uppercase;
+    transform-origin: center;
+    padding: 0.01rem;
+}
+
+#li-color {
+    color: rgb(171, 127, 134);
+    transition: 0.17s ease-out;
+}
+
+#li-color:hover {
+    color: white;
+    text-shadow: rgba(255, 255, 255, 1) 0px 0px 18px;
+}
+
+h1 {
+    font-family: "Monoton";
+    font-weight: 600;
+    font-size: 5vw;
+    /* margin: 30px; */
+    margin: 0.25em;
+    margin-bottom: 0.25em;
+    text-align: center;
+    background: rgb(255, 213, 165);
+    background: linear-gradient(
+        90deg,
+        rgba(196, 144, 55, 0.6) 0%,
+        rgba(255, 160, 50, 0.6) 10%,
+        rgba(248, 179, 41, 0.6) 45%,
+        rgba(250, 182, 64, 0.6) 90%,
+        rgba(192, 140, 51, 0.6) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-color: 0, 0, 0, 0;
+    letter-spacing: 4px;
+    position: relative;
+    z-index: 1;
+}
+
+.sticky-title {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    transition: opacity 0.3s;
+    opacity: 1;
+}
+
+.masonry {
+    column-count: 3;
+    column-gap: 17px;
+    max-width: 1300px;
+    margin: auto;
+    width: 100%;
+}
+
+.masonry-item {
+    break-inside: avoid;
+    margin-bottom: 17px;
+    position: relative;
+    filter: drop-shadow(0px 17px 11px #00000060);
+}
+
+.masonry-item img,
+.masonry-item video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 15px;
+}
+
+.masonry-item.darken-on-hover:hover img {
+    filter: brightness(45%);
+}
+
+.masonry-item.darken-on-hover img {
+    transition: filter 0.5s ease-in-out;
+}
+
+.masonry-item.darken-on-hover:hover video {
+    filter: brightness(45%);
+}
+
+.masonry-item.darken-on-hover video {
+    transition: filter 0.5s ease-in-out;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Poiret One", sans-serif;
+    font-weight: 600;
+    color: #ffc2d9;
+    font-size: 0.8vw;
+    text-align: justify;
+    text-justify: inter-word;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 0.5s, opacity 0.5s linear;
+}
+
+.masonry-item:hover .overlay-text {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+@media (min-width: 1300px) and (max-width: 2560px) {
+    h1 {
+        font-size: 7em;
+    }
+    .overlay-text {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 1299.8px) {
+    h1 {
+        font-size: 8.7vw;
+    }
+    .overlay-text {
+        font-size: 1.3vw;
+    }
+}
+@media (max-width: 800px) {
+    .masonry {
+        column-count: 2;
+    }
+    .navbar .nav-item {
+        font-size: 2vw;
+    }
+    .overlay-text {
+        font-size: 2.2vw;
+    }
+    .navbar-nav .nav-item {
+        font-size: 0.9em;
+    }
+    #navbar {
+        padding: 0.06em;
+    }
+    .navbar-nav {
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 580px) {
+    .masonry {
+        column-count: 1;
+    }
+    .navbar-nav .nav-item {
+        padding: 0 0px;
+        margin: 0 0px;
+    }
+    .navbar-nav .nav-item {
+        font-size: 2.5vw;
+    }
+    .overlay-text {
+        font-size: 3.7vw;
+    }
+    .surname {
+        display: none;
+    }
+    h1 {
+        font-size: 16vw;
+        margin: 0.1em;
+    }
+    .navbar-nav {
+        justify-content: space-between;
+    }
+    .top-bar {
+        padding: 0;
+    }
+}
