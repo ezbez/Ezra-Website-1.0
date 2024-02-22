@@ -31,16 +31,23 @@ body {
     height: 100%;
 }
 
+.gameBox,
+#grid {
+    margin: 0;
+    padding: 0;
+}
+
 .gameBox {
     position: relative;
     z-index: 1;
 }
 
 .gameBox {
-    width: 85vw;
-    height: 85vw;
-    max-width: 632px;
-    max-height: 632px;
+    width: 90vw;
+    height: 90vw;
+    max-width: 630px;
+    max-height: 630px;
+    overflow: hidden;
     margin: auto;
     display: flex;
     justify-content: center;
@@ -53,6 +60,9 @@ body {
     );
     box-shadow: -25px 25px 35px 10px rgba(46, 61, 73, 0.12);
     overflow: hidden;
+    /* display: grid; */
+    place-items: center;
+    box-sizing: border-box;
 }
 
 .gameBox::after {
@@ -67,6 +77,7 @@ body {
     background-repeat: repeat;
     opacity: 0.5;
     z-index: 1;
+    box-sizing: border-box;
 }
 
 .gameBox > * {
@@ -75,15 +86,17 @@ body {
 }
 
 #grid {
+    position: relative;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 12px;
+    gap: 2%;
     width: 91%;
     height: 91%;
     box-sizing: border-box;
 }
 
 #grid img {
+    box-sizing: border-box;
     width: 100%;
     height: auto;
     border-radius: 15%;
@@ -101,23 +114,23 @@ body {
     src: url("fonts/bouncy.otf");
 }
 
-.title {
+/* .title {
     display: flex;
     justify-content: center;
     width: 100%;
     margin: auto;
-}
+} */
 h1 {
     color: rgba(236, 215, 243, 0.895);
-    font-size: 4.5rem;
+    font-size: clamp(7vw, 7vw, 30px);
     font-family: "bouncy";
     letter-spacing: 0.5px;
     font-weight: 700;
     text-shadow: 0 0 5px #ffffffbf, -0.2em 0.2em 0.3em rgba(46, 61, 73, 0.403);
     display: flex;
     justify-content: center;
-    margin-top: 3%;
-    margin-bottom: 2%;
+    margin-top: 5%;
+    margin-bottom: 3%;
     word-spacing: 3px;
 }
 
@@ -143,17 +156,9 @@ h1 {
     transform: translateX(550px) rotate(50deg);
 }
 
-@media (min-width: 770px) and (max-width: 2560px) {
-    h1 {
-        font-size: 4.5rem;
-    }
+@media (min-width: 700px) and (max-width: 2560px) {
     .gameBox {
         width: 42rem;
         height: 42rem;
-    }
-}
-@media (max-width: 769.8px) {
-    h1 {
-        font-size: 9vw;
     }
 }

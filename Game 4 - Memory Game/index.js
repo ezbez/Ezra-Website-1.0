@@ -199,6 +199,6 @@ function resetGame() {
     // Remove all the cards from the grid
     const cards = document.querySelectorAll("img");
     cards.forEach((card) => card.remove());
-
+    document.getElementById("grid").innerHTML = "";
     createBoard();
 }
