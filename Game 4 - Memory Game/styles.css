@@ -133,7 +133,7 @@ body {
 }
 h1 {
     color: rgba(236, 215, 243, 0.895);
-    font-size: clamp(10px, 9vw, 7rem);
+    font-size: clamp(10px, 9vw, 6rem);
     font-family: "bouncy";
     letter-spacing: 0.5px;
     font-weight: 700;
@@ -141,8 +141,8 @@ h1 {
     display: inline-block;
     background: linear-gradient(
         180deg,
-        rgba(139, 158, 169, 0.25) 0%,
-        rgba(151, 180, 207, 0.25) 100%
+        rgba(192, 151, 104, 0.25) 0%,
+        rgba(187, 171, 112, 0.25) 100%
     );
     box-shadow: -25px 25px 35px 10px rgba(46, 61, 73, 0.12);
     border-radius: 1rem;
