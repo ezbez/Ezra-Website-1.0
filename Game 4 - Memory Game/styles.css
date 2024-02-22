@@ -1,10 +1,19 @@
-.container {
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-}
+    height: 100%;
+    overflow: auto;
+} */
 
 body::before {
     content: "";
@@ -28,7 +37,7 @@ body {
         rgba(242, 204, 139, 1) 0%,
         rgb(218, 207, 227) 100%
     );
-    height: 100%;
+    height: 100vh;
 }
 
 .gameBox,
@@ -114,22 +123,31 @@ body {
     src: url("fonts/bouncy.otf");
 }
 
-/* .title {
+.title {
+    box-sizing: border-box;
+    /* border: solid 3px black; */
     display: flex;
     justify-content: center;
     width: 100%;
     margin: auto;
-} */
+}
 h1 {
     color: rgba(236, 215, 243, 0.895);
-    font-size: clamp(7vw, 7vw, 30px);
+    font-size: clamp(10px, 9vw, 7rem);
     font-family: "bouncy";
     letter-spacing: 0.5px;
     font-weight: 700;
     text-shadow: 0 0 5px #ffffffbf, -0.2em 0.2em 0.3em rgba(46, 61, 73, 0.403);
-    display: flex;
+    display: inline-block;
+    background: linear-gradient(
+        180deg,
+        rgba(139, 158, 169, 0.25) 0%,
+        rgba(151, 180, 207, 0.25) 100%
+    );
+    box-shadow: -25px 25px 35px 10px rgba(46, 61, 73, 0.12);
+    border-radius: 1rem;
     justify-content: center;
-    margin-top: 5%;
+    margin-top: 4%;
     margin-bottom: 3%;
     word-spacing: 3px;
 }
