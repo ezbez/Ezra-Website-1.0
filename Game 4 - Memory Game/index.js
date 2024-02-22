@@ -139,8 +139,6 @@ function checkMatch() {
         alert("I'm hungry! Stop messing around!!");
         cards[optionOneId].setAttribute("src", "images/hungry4.png");
     } else if (cardsChosen[0] == cardsChosen[1]) {
-        // Match found
-        // alert("You found a match!!!");
         cards[optionOneId].setAttribute("src", "images/cherries2.png");
         cards[optionTwoId].setAttribute("src", "images/cherries2.png");
         cards[optionOneId].removeEventListener("click", flipCard);
@@ -173,7 +171,7 @@ function checkMatch() {
         setTimeout(() => {
             alert("You won! Congratulations!");
             resetGame();
-        }, 650); // Delay can be adjusted as needed
+        }, 650);
     }
     // Reset cardsChosen and cardsChosenIds for the next turn
     cardsChosen = [];
@@ -202,6 +200,5 @@ function resetGame() {
     const cards = document.querySelectorAll("img");
     cards.forEach((card) => card.remove());
 
-    // Create a new board
     createBoard();
 }
