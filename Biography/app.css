@@ -1,0 +1,106 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("textures/noise2.png");
+    background-repeat: repeat;
+    background-size: 250px 250px;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.9;
+    mix-blend-mode: multiply;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(
+        180deg,
+        rgba(242, 204, 139, 1) 0%,
+        rgb(218, 207, 227) 100%
+    );
+}
+
+.bioCard {
+    width: 90vw;
+    height: 90vw;
+    max-width: 630px;
+    max-height: 630px;
+    overflow: hidden;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7%;
+    background: linear-gradient(
+        180deg,
+        rgba(227, 182, 131, 0.7) 0%,
+        rgb(227, 218, 168, 0.7) 100%
+    );
+    box-shadow: -25px 25px 35px 10px rgba(46, 61, 73, 0.12);
+    overflow: hidden;
+    place-items: center;
+    box-sizing: border-box;
+}
+
+.bioCard::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("textures/noise2.png");
+    background-size: 250px 250px;
+    background-repeat: repeat;
+    opacity: 0.5;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+.bioCard > * {
+    position: relative;
+    z-index: 2;
+}
+
+.bioText {
+    /* display: flex;
+    justify-content: center; */
+    width: 80%;
+    height: 80%;
+    font-family: "Poiret One", sans-serif;
+    font-weight: 600;
+    color: white;
+    font-size: 120%;
+    text-align: center;
+}
+
+p {
+    margin-bottom: 5.5%;
+    margin-top: 1%;
+}
+
+.rocket {
+    width: 140%;
+    position: relative;
+    left: -21%;
+    bottom: 76%;
+    transform: rotate(-80deg);
+    opacity: 0.037;
+}

@@ -139,13 +139,13 @@ h1 {
     font-weight: 700;
     text-shadow: 0 0 5px #ffffffbf, -0.2em 0.2em 0.3em rgba(46, 61, 73, 0.403);
     display: inline-block;
-    background: linear-gradient(
+    /* background: linear-gradient(
         180deg,
-        rgba(192, 151, 104, 0.25) 0%,
-        rgba(187, 171, 112, 0.25) 100%
+        rgba(201, 153, 98, 0.25) 0%,
+        rgba(184, 153, 112, 0.25) 100%
     );
     box-shadow: -25px 25px 35px 10px rgba(46, 61, 73, 0.12);
-    border-radius: 1rem;
+    border-radius: 1rem; */
     justify-content: center;
     margin-top: 4%;
     margin-bottom: 3%;
