@@ -38,145 +38,148 @@ body {
         rgb(218, 207, 227) 100%
     );
     height: 100vh;
-}
-
-.gameBox,
-#grid {
-    margin: 0;
-    padding: 0;
-}
-
-.gameBox {
-    position: relative;
-    z-index: 1;
-}
-
-.gameBox {
-    width: 90vw;
-    height: 90vw;
-    max-width: 630px;
-    max-height: 630px;
-    overflow: hidden;
-    margin: auto;
     display: flex;
     justify-content: center;
-    align-items: center;
-    border-radius: 7%;
-    background: linear-gradient(
-        180deg,
-        rgba(227, 182, 131, 0.7) 0%,
-        rgb(227, 218, 168, 0.7) 100%
-    );
-    box-shadow: -25px 25px 35px 10px rgba(46, 61, 73, 0.12);
-    overflow: hidden;
-    /* display: grid; */
-    place-items: center;
-    box-sizing: border-box;
-}
 
-.gameBox::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url("textures/noise2.png");
-    background-size: 250px 250px;
-    background-repeat: repeat;
-    opacity: 0.5;
-    z-index: 1;
-    box-sizing: border-box;
-}
+    .gameBox,
+    #grid {
+        margin: 0;
+        padding: 0;
+    }
 
-.gameBox > * {
-    position: relative;
-    z-index: 2;
-}
+    .gameBox {
+        position: relative;
+        z-index: 1;
+    }
 
-#grid {
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2%;
-    width: 91%;
-    height: 91%;
-    box-sizing: border-box;
-}
+    .gameBox {
+        width: 90vw;
+        height: 90vw;
+        max-width: 630px;
+        max-height: 630px;
+        overflow: hidden;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 7%;
+        background: linear-gradient(
+            180deg,
+            rgba(227, 182, 131, 0.7) 0%,
+            rgb(227, 218, 168, 0.7) 100%
+        );
+        box-shadow: -25px 25px 35px 10px rgba(46, 61, 73, 0.12);
+        overflow: hidden;
+        /* display: grid; */
+        place-items: center;
+        box-sizing: border-box;
+    }
 
-#grid img {
-    box-sizing: border-box;
-    width: 100%;
-    height: auto;
-    border-radius: 15%;
-    object-fit: cover;
-    background: linear-gradient(
-        135deg,
-        rgba(189, 213, 231, 0.8) 0%,
-        rgb(186, 219, 194, 0.8) 60%,
-        rgb(221, 237, 224, 0.8) 100%
-    );
-}
+    .gameBox::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url("textures/noise2.png");
+        background-size: 250px 250px;
+        background-repeat: repeat;
+        opacity: 0.5;
+        z-index: 1;
+        box-sizing: border-box;
+    }
 
-@font-face {
-    font-family: "bouncy";
-    src: url("fonts/bouncy.otf");
-}
+    .gameBox > * {
+        position: relative;
+        z-index: 2;
+    }
 
-.title {
-    box-sizing: border-box;
-    /* border: solid 3px black; */
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin: auto;
-}
-h1 {
-    color: rgba(236, 215, 243, 0.895);
-    font-size: clamp(10px, 9vw, 6rem);
-    font-family: "bouncy";
-    letter-spacing: 0.5px;
-    font-weight: 700;
-    text-shadow: 0 0 5px #ffffffbf, -0.2em 0.2em 0.3em rgba(46, 61, 73, 0.403);
-    display: inline-block;
-    /* background: linear-gradient(
+    #grid {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2%;
+        width: 91%;
+        height: 91%;
+        box-sizing: border-box;
+    }
+
+    #grid img {
+        box-sizing: border-box;
+        width: 100%;
+        height: auto;
+        border-radius: 15%;
+        object-fit: cover;
+        background: linear-gradient(
+            135deg,
+            rgba(189, 213, 231, 0.8) 0%,
+            rgb(186, 219, 194, 0.8) 60%,
+            rgb(221, 237, 224, 0.8) 100%
+        );
+    }
+
+    @font-face {
+        font-family: "bouncy";
+        src: url("fonts/bouncy.otf");
+    }
+
+    .title {
+        box-sizing: border-box;
+        /* border: solid 3px black; */
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: auto;
+    }
+    h1 {
+        color: rgba(236, 215, 243, 0.895);
+        font-size: clamp(10px, 9vw, 6rem);
+        font-family: "bouncy";
+        letter-spacing: 0.5px;
+        font-weight: 700;
+        text-shadow: 0 0 5px #ffffffbf,
+            -0.2em 0.2em 0.3em rgba(46, 61, 73, 0.403);
+        display: inline-block;
+        /* background: linear-gradient(
         180deg,
         rgba(201, 153, 98, 0.25) 0%,
         rgba(184, 153, 112, 0.25) 100%
     );
     box-shadow: -25px 25px 35px 10px rgba(46, 61, 73, 0.12);
     border-radius: 1rem; */
-    justify-content: center;
-    margin-top: 4%;
-    margin-bottom: 3%;
-    word-spacing: 3px;
-}
+        justify-content: center;
+        margin-top: 4%;
+        margin-bottom: 3%;
+        word-spacing: 3px;
+    }
 
-/* SHINE EFFECT */
-.card-with-shine {
-    position: relative;
-    overflow: hidden;
-}
+    /* SHINE EFFECT */
+    .card-with-shine {
+        position: relative;
+        overflow: hidden;
+    }
 
-.shine {
-    position: absolute;
-    top: -100px;
-    left: -250px;
-    height: 500px;
-    width: 40px;
-    background: rgba(255, 255, 255, 0.18);
-    transform: rotate(50deg);
-    transition: all 0.23s ease-out;
-    transition-delay: 0.18s;
-}
+    .shine {
+        position: absolute;
+        top: -100px;
+        left: -250px;
+        height: 500px;
+        width: 40px;
+        background: rgba(255, 255, 255, 0.18);
+        transform: rotate(50deg);
+        transition: all 0.23s ease-out;
+        transition-delay: 0.18s;
+    }
 
-.card-with-shine.add-shine .shine {
-    transform: translateX(550px) rotate(50deg);
-}
+    .card-with-shine.add-shine .shine {
+        transform: translateX(550px) rotate(50deg);
+    }
 
-@media (min-width: 700px) and (max-width: 2560px) {
-    .gameBox {
-        width: 42rem;
-        height: 42rem;
+    @media (min-width: 700px) and (max-width: 2560px) {
+        .gameBox {
+            width: 42rem;
+            height: 42rem;
+        }
     }
 }

@@ -37,7 +37,7 @@ body {
     );
 }
 
-.bioCard {
+.aboutCard {
     width: 90vw;
     height: 90vw;
     max-width: 630px;
@@ -59,7 +59,7 @@ body {
     box-sizing: border-box;
 }
 
-.bioCard::after {
+.aboutCard::after {
     content: "";
     position: absolute;
     top: 0;
@@ -74,12 +74,16 @@ body {
     box-sizing: border-box;
 }
 
-.bioCard > * {
+.aboutCard > * {
     position: relative;
     z-index: 2;
 }
 
-.bioText {
+.title {
+    margin-top: 0;
+}
+
+.aboutText {
     /* display: flex;
     justify-content: center; */
     width: 80%;
@@ -87,8 +91,8 @@ body {
     font-family: "Poiret One", sans-serif;
     font-weight: 600;
     color: white;
-    font-size: 120%;
-    text-align: center;
+    font-size: clamp(1px, 2.8vw, 1.2rem);
+    text-align: justify;
 }
 
 p {

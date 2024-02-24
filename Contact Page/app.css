@@ -87,7 +87,7 @@ body {
     font-family: "Poiret One", sans-serif;
     font-weight: 600;
     color: white;
-    font-size: 2rem;
+    font-size: clamp(1px, 4.4vw, 2rem);
     text-align: center;
 }
 

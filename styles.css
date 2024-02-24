@@ -104,7 +104,7 @@ h1 {
 .masonry {
     column-count: 3;
     column-gap: 17px;
-    max-width: 1300px;
+    max-width: 1120px;
     margin: auto;
     width: 100%;
 }
@@ -148,7 +148,7 @@ h1 {
     font-family: "Poiret One", sans-serif;
     font-weight: 600;
     color: #ffc2d9;
-    font-size: 0.8vw;
+    font-size: 0.85vw;
     text-align: justify;
     text-justify: inter-word;
     visibility: hidden;
