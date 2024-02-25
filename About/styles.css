@@ -13,7 +13,7 @@ body::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url("textures/noise2.png");
+    background-image: url("Textures/noise2.png");
     background-repeat: repeat;
     background-size: 250px 250px;
     pointer-events: none;
