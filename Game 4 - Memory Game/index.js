@@ -193,10 +193,8 @@ function flipCard() {
 }
 
 function resetGame() {
-    // Reset the cardsWon array
     cardsWon.length = 0;
 
-    // Remove all the cards from the grid
     const cards = document.querySelectorAll("img");
     cards.forEach((card) => card.remove());
     document.getElementById("grid").innerHTML = "";
