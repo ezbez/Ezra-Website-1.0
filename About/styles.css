@@ -103,8 +103,8 @@ p {
 .rocket {
     width: 140%;
     position: relative;
-    left: -21%;
-    bottom: 76%;
+    left: -18%;
+    bottom: 92%;
     transform: rotate(-80deg);
     opacity: 0.037;
 }
